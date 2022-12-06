@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jetty-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jetty-olaba
+  template:
+    metadata:
+      labels:
+        app: jetty-olaba
+    spec:
+      containers:
+      - name: jetty-olaba
+        image: olaba29/jetty-olaba
+        ports:
+          - containerPort: 8080 

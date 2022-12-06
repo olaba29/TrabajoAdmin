@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cliente-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cliente-olaba
+  template:
+    metadata:
+      labels:
+        app: cliente-olaba
+    spec:
+      containers:
+      - name: pod-cliente
+        image: olaba29/app-cliente

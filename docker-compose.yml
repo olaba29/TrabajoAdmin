@@ -1,0 +1,8 @@
+services:
+  server-jetty:
+    image: olaba29/jetty-olaba
+    ports:
+      - 8080:8080
+  app-cliente:
+    image: olaba29/app-cliente
+  
